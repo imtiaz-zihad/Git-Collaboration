@@ -1,3 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
 section {
     padding: 2rem;
 }
@@ -5,42 +31,33 @@ section {
 section:nth-child(even) {
     background-color: #f4f4f4;
 }
-
-#team {
+#gallery {
     text-align: center;
-    padding: 20px;
-    background-color: white;
-}
+    padding: 40px;
+    background-color: #f4f4f4;
+  }
 
-.team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
     margin-top: 20px;
 }
 
-.member {
-    background-color: white;
-    padding: 10px;
-    border: 1px solid gray;
+.gallery-grid img, 
+.gallery-grid video {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
-h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+.gallery-grid img:hover, 
+.gallery-grid video:hover {
+    transform: scale(1.05);
 }
 
-h3 {
-    font-size: 20px;
-    color: black;
-}
 
-p {
-    font-size: 16px;
-    color: gray;
-}
+  
